@@ -18,6 +18,10 @@ public class BooksTest extends BaseTest {
         loginPage.fullLogin();
         Utils.waitInSeconds(1);
         homePage.printAllBooks();
+        homePage.getAllBooksTitle();
+        homePage.getBooksAuthors();
+        homePage.getBooksPublishers();
+
     }
 }
 
