@@ -14,6 +14,13 @@ public class LoginPage extends BasePage {
     @FindBy(css = "#login")
     WebElement loginField;
 
+    @FindBy(xpath = "//*[contains(text(), 'Git Pocket Guide')]")
+    WebElement firstBook;
+    @FindBy(xpath = "//*[contains(text(), 'Learning JavaScript Design Patterns')]")
+    WebElement secondBook;
+    @FindBy(xpath = "//*[contains(text(), 'Designing Evolvable Web APIs with ASP.NET')]")
+    WebElement thirdBook;
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -23,4 +30,18 @@ public class LoginPage extends BasePage {
         super.driver.findElement(By.cssSelector("#password")).sendKeys(Constants.PASSWORD);
         super.driver.findElement(By.cssSelector("#login")).click();
     }
+
+
+    public void clickOnFirstBook() {
+        clickElement(firstBook);
+    }
+
+    public void clickOnSecondBook() {
+        clickElement(secondBook);
+    }
+
+    public void clickOnThirdBook() {
+        clickElement(thirdBook);
+    }
+
 }
