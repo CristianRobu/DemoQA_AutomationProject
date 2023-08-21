@@ -16,7 +16,6 @@ public class Utils {
         driver.switchTo().alert().accept();
     }
 
-
     public static String getAlertText(WebDriver driver) {
         return driver.switchTo().alert().getText();
     }
